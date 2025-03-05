@@ -32,7 +32,7 @@ public class Main {
 		String ave = Paths.get("hello", "averroes", "averroes-lib-class.jar").toAbsolutePath().toString();
 		String placeholder = Paths.get("hello", "averroes", "placeholder-lib.jar").toAbsolutePath().toString();
 
-		String mainClass = "ca.ualberta.spa.callgraphs.examples.HelloWorld";
+		String mainClass = "ca.ualberta.spa.callgraphs.examples.Shapes";
 		boolean isAverroes = false;
 
 		/* Reset Soot */
@@ -63,10 +63,10 @@ public class Main {
 		if(isAverroes) Scene.v().setEntryPoints(entryPoints());
 
 		/* Run the call graph transformer */
-		applyCHA();
+//		applyCHA();
 //		applyRTA();
 //		applyVTA();
-//		applySpark(isAverroes);
+		applySpark(isAverroes);
 		long end = System.currentTimeMillis();
 		long time = (end - start);
 		
