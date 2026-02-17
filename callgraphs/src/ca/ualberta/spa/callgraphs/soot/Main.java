@@ -32,8 +32,8 @@ public class Main {
 		String ave = Paths.get("hello", "averroes", "averroes-lib-class.jar").toAbsolutePath().toString();
 		String placeholder = Paths.get("hello", "averroes", "placeholder-lib.jar").toAbsolutePath().toString();
 
-		String mainClass = "ca.ualberta.spa.callgraphs.examples.Shapes";
-		boolean isAverroes = false;
+		String mainClass = "ca.ualberta.spa.callgraphs.examples.HelloWorld";
+		boolean isAverroes = true;
 
 		/* Reset Soot */
 		G.reset();
@@ -47,7 +47,6 @@ public class Main {
 		// Set the class path
 		if(isAverroes) Options.v().set_soot_classpath(bin + File.pathSeparator + ave + File.pathSeparator + placeholder);
 		else Options.v().set_soot_classpath(bin + File.pathSeparator + jre);
-		
 
 		// Set the main class
 		Options.v().set_main_class(mainClass);
